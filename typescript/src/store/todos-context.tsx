@@ -50,3 +50,4 @@ const TodosContextProvider = (props: TodosContextProviderProps) => {
 };
 
 export default TodosContextProvider;
+export { TodosContext };

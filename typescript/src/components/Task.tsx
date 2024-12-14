@@ -1,12 +1,15 @@
 import classes from "./Task.module.css";
+import { useContext } from "react";
+import { TodosContext } from "../store/todos-context";
 
 interface TodoProps {
   itemId: string;
   text: string;
-  onTodoDelete: (id: string) => void;
 }
 
 export default function Task(props: TodoProps) {
+  const context = useContext(TodosContext);
+
   return (
     <>
       <li className={classes.item}>
@@ -18,7 +21,7 @@ export default function Task(props: TodoProps) {
             </div>
           </div>
           <div className={classes.actions}>
-            <button onClick={() => props.onTodoDelete(props.itemId)}>
+            <button onClick={() => context.removeTodo(props.itemId)}>
               Delete
             </button>
           </div>
