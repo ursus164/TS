@@ -2,7 +2,7 @@ import React from "react";
 
 // interface representing props
 interface TodosProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   items: string[];
 }
 
