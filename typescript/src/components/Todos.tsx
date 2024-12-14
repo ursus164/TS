@@ -1,9 +1,11 @@
-import React from "react";
+// import React from "react";
+
+import Todo from "../models/types";
 
 // interface representing props
 interface TodosProps {
-  children?: React.ReactNode;
-  items: string[];
+//   children: React.ReactNode;
+  items: Todo[];
 }
 
 const Todos = (props: TodosProps) => {
@@ -11,7 +13,7 @@ const Todos = (props: TodosProps) => {
     <>
       <ul>
         {props.items.map((item) => (
-          <li key={item}>{item}</li>
+          <li key={item.id}>{item.text}</li>
         ))}
       </ul>
     </>
