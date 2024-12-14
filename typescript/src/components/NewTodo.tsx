@@ -1,11 +1,13 @@
 import classes from './NewTodo.module.css'
+import { useContext } from "react";
+import { TodosContext } from "../store/todos-context";
 
-interface NewTodoProps {
-    onAddTodo: (text: string) => void
+// interface NewTodoProps {
+//     onAddTodo: (text: string) => void
+// }
 
-}
-
-export default function NewTodo(props: NewTodoProps) {
+export default function NewTodo() {
+  const context = useContext(TodosContext);
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -15,7 +17,7 @@ export default function NewTodo(props: NewTodoProps) {
 
     // console.log(data.text)
 
-    props.onAddTodo(data.text as string)
+    context.addTodo(data.text as string);
   }
 
   return (
