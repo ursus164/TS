@@ -1,6 +1,7 @@
 // import React from "react";
 
 import Todo from "../models/types";
+import Task from "./Task";
 
 // interface representing props
 interface TodosProps {
@@ -13,7 +14,7 @@ const Todos = (props: TodosProps) => {
     <>
       <ul>
         {props.items.map((item) => (
-          <li key={item.id}>{item.text}</li>
+          <Task itemId={item.id} text={item.text}/>
         ))}
       </ul>
     </>
