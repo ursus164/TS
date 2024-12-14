@@ -22,10 +22,8 @@ function App() {
   }
 
   function onDeleteTodoHandler(id: string) {
-    setTodos((prevState) => {
-      const existingTodos = [...prevState];
-      const newTodos = existingTodos.filter((todo) => todo.id !== id);
-      return [...newTodos];
+    setTodos((prevState) => {  
+     return prevState.filter((todo) => todo.id !== id);
     });
   }
 
