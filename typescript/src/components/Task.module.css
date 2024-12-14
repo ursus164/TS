@@ -1,0 +1,22 @@
+.item {
+  margin: 1rem 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  background-color: #f7f5ef;
+  border-radius: 25px;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+}
+
+.actions button {
+  padding: 1rem 2rem;
+}
