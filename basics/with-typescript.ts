@@ -1,0 +1,9 @@
+// types of that function are not announced ahead of time
+function add(a : number, b : number) : number {
+    return a + b;
+  }
+  
+  const result = add(2, 5);
+//   const result = add('2', '5');
+  
+  console.log(result);
